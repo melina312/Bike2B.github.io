@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    background: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+} 
+.cdk-global-scrollblock {
+    position: static !important;
+    width: initial !important;
+    overflow-y: inherit !important;
+}
+  

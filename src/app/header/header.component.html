@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<section>
+    <div>
+        <p>
+            <mat-toolbar color="primary">
+                <a href="/">
+                    <img src="../../assets/pictures/Logo.png" alt="Logo">
+                </a>
+
+                <span class="toolbar-spacer"></span>
+                <nav mat-tab-nav-bar>
+                    <a class="navigation" mat-tab-link routerLink="/"> {{'Startseite' | translate}} </a>
+                    <a href="route" class="navigation" mat-tab-link (click)=onClick($event)> Simulation </a>
+                    <a class="navigation" mat-tab-link routerLink="/ergebnisse"> {{'Ergebnisse' | translate }} </a>
+                    <a class="navigation" mat-tab-link routerLink="/support"> Support </a>
+                </nav>
+
+                <span class="spacer"></span>
+                <!--Klickbare Bilder für die Sprachauswahl-->
+                <button class="icon-button" (click)="useLanguage('de')">
+                    <img
+                      class="sprachauswahl-deutsch"
+                      src="../../assets/pictures/FlaggeDE.jpeg"
+                    />
+                  </button>
+
+                <button class="icon-button" (click)="useLanguage('en')">
+                    <img
+                      class="sprachauswahl-englisch"
+                      src="../../assets/pictures/FlaggeUK.jpeg"
+                    />
+                  </button>
+            </mat-toolbar>
+        </p>
+    </div>
+</section>

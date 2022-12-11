@@ -1,0 +1,48 @@
+
+<h6 class="überschrift">{{'Absatzplanung' | translate}}</h6>
+        <p>{{'Vertriebswunsch' | translate}}</p>
+        
+		<!--Die Eingabetabelle wird implementiert-->
+		<table class="eingabetabelle1">
+			<ng-container appearance="fill">
+				<tr>
+					<td>{{'Produkt' | translate}} 1 (P1)</td>
+					<td><input  type="number" name="Vabsatzplan_p1" [(ngModel)]="Vabsatzplan_p1" step="10" min="0"></td>
+				</tr>
+				<tr>
+					<td>{{'Produkt' | translate}} 2 (P2)</td>
+					<td><input  type="number" name="Vabsatzplan_p1" [(ngModel)]="Vabsatzplan_p2" step="10" min="0"></td>
+				</tr>
+				<tr>
+					<td>{{'Produkt' | translate}} 3 (P3)</td>
+					<td><input  type="number" name="Vabsatzplan_p1" [(ngModel)]="Vabsatzplan_p3" step="10" min="0"></td>
+				</tr>
+			</ng-container>
+		</table>
+		<p>{{'Direktverkauf' | translate}}</p>
+		<table class="eingabetabelle2">
+			<ng-container>
+				<tr>
+					<td>{{'Produkt' | translate}} 1 (P1)</td>
+					<td><input type="number" name="V_direkt_menge_p1" [(ngModel)]="V_direkt_menge_p1" step="10" min="0"></td>
+					<td><input type="number" name="V_direkt_preis_p1" [(ngModel)]="V_direkt_preis_p1" step="10" min="0"></td>
+					<td><input type="number" name="V_direkt_strafe_p1" [(ngModel)]="V_direkt_strafe_p1" step="10" min="0"></td>
+				</tr>
+				<tr>
+					<td>{{'Produkt' | translate}} 2 (P2)</td>
+					<td><input type="number" name="V_direkt_menge_p1" [(ngModel)]="V_direkt_menge_p2" step="10" min="0"></td>
+					<td><input type="number" name="V_direkt_preis_p1" [(ngModel)]="V_direkt_preis_p2" step="10" min="0"></td>
+					<td><input type="number" name="V_direkt_strafe_p1" [(ngModel)]="V_direkt_strafe_p2" step="10" min="0"></td>
+				</tr>
+				<tr>
+					<td>{{'Produkt' | translate}} 3 (P3)</td>
+					<td><input type="number" name="V_direkt_menge_p1" [(ngModel)]="V_direkt_menge_p3" step="10" min="0"></td>
+					<td><input type="number" name="V_direkt_preis_p1" [(ngModel)]="V_direkt_preis_p3" step="10" min="0"></td>
+					<td><input type="number" name="V_direkt_strafe_p1" [(ngModel)]="V_direkt_strafe_p3" step="10" min="0"></td>
+				</tr>
+			</ng-container>
+		</table>
+        <p>&nbsp;</p>	
+        <a routerLink="/programmplanung" (click)= "speichern()" class="blue-button"> {{'Speichern' | translate}} & {{'Weiter' | translate}} </a>
+        <p>&nbsp;</p>	
+    	<p>&nbsp;</p>

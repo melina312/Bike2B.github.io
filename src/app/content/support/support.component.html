@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<!-- Startseite -->
+          <div class="row">
+            <div class="column">
+              <h1 class="h1">{{'Willkommen auf unserer Support-Seite' | translate}}</h1>
+              <div class="row">
+                <div class="column1">
+                  <h2 class="h2">{{'Zu den Formeln' | translate}}</h2>
+                  <img class="icon" (click)="scroll(formeln)" src="../../../assets/pictures/Formeln.png" alt="Formeln">
+                </div>
+                <div class="column1">
+                  <h2 class="h2">{{'Zu den FAQs' | translate}}</h2>
+                  <img class="icon" (click)="scroll(faq)" src="../../../assets/pictures/FAQ_Logo.png" alt="Formeln">
+                </div>
+                <div class="column1">
+                  <h2 class="h2">{{'Zum Kontakt' | translate}}</h2>
+                  <img class="icon" (click)="scroll(team)" src="../../../assets/pictures/Support_Logo.png" alt="Formeln">
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <img class="image" src="../../../assets/pictures/Support.png" alt="Support Bild">
+            </div>
+          </div>
+  
+  <!-- Formeln -->
+  <section id="einfuehrung" #formeln>
+    <div class="container">
+          <div class="einfuehrung-info">
+            <h2>{{'Unsere Formeln zur Berechnung der Ergebnisse' | translate}}</h2>
+            
+            <mat-accordion>
+
+               <!-- Formeln Programmplanung -->
+               <mat-expansion-panel (opened)="panelOpenState = true"
+                                    (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                    {{'Programmplanung' | translate}}
+                    </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <h3>{{'Endprodukte' | translate}}</h3>
+                    <p>
+                      <b>Absatz</b> = Vertriebswunsch + Direktverkäufe <br>
+                      <b>Produktionsprogramm P</b> = Absatz + geplanter Endbestand - aktueller Lagerbestand - Aufträge in Bearbeitung - Aufträge in Warteschlange
+                    </p><br>
+                    <h3>Fertigungsprodukte</h3>
+                    <p>
+                      <b>Produktionsprogramm E</b> = Vertriebswunsch + Bedarf + geplanter Endbestand - aktueller Lagerbestand - Aufträge in Bearbeitung - Aufträge in Warteschlange<br>
+                      <small>
+                        <img class="info" src="../../../assets/pictures/Info.png" alt="">
+                        Der Vertriebswunsch und der Bedarf werden durch den Übertrag aus dem übergeordneten Produkt der Stückliste eingetragen. Der Vertriebswunsch errechnet sich 
+                        aus dem Produktionsprogramm, wohingegend der Bedarf sich aus den in Warteschlange befindlichen Teile errechnet. 
+                      </small><br>
+                    </p>
+                    </mat-expansion-panel>
+
+                <!-- Formeln Kapazitätsplanung -->
+                 <mat-expansion-panel (opened)="panelOpenState = true"
+                                      (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      {{'Kapazitätsplanung' | translate}}
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <h3>Kapazitätsbedarf</h3>
+                  <p>
+                    <b>Kapazitätsbedarf</b> = Kapazitätsbedarf Produktion + Rüstzeit + Kapazitätsbedarf Vorperiode + Rüstzeit Vorperiode + (Zusatzminuten pro Tag * 5) 
+                  </p>
+                  <u>Kapazitätsbedarf Produktion</u><br>
+                    <table style="width:100%">
+                      <tr>
+                        <th style="width:20%">Arbeitsplatz</th>
+                        <th>Berechnung</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>(E49+E54+E29) * 6</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>(E50+E55+E30) * 5</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>E51 * 5 + (E56+31) * 6</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>E1 * 6 + (E2+E3) * 7</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>E16 * 2 + (E18+E19+E20) * 3</td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>(E10+E11+E12+E13+E14+E15+E18+E19+E20+E26) *2</td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>(E10+E13) + (E11+E12+E14+E15) * 2 + (E18+E19+E20) * 3</td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>(E18+E19+E20) * 2 + (E10+E11+E12+E13+E14+E15) * 3</td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td>(E4+E5+E6+E7+E8+E9) * 4</td>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td>(E4+E5+E6+E7+E8+E9) * 3</td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td>(E10+E11+E12+E13+E14+E15) * 3</td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>(E10+E11+E12+E13+E14+E15) * 2</td>
+                      </tr>
+                      <tr>
+                        <td>14</td>
+                        <td>E16 * 3</td>
+                      </tr>
+                      <tr>
+                        <td>15</td>
+                        <td>(E17+E26) * 3</td>
+                      </tr>
+                    </table><br>
+                  <u>Rüstzeit</u><br>
+                    <b>Rüstzeit</b> = (Durchschnittliche Rüstdauer / Arbeitsplatz) * Anzahl Rüstevents der Vorperiode <br>
+                    <table style="width:50%">
+                      <tr>
+                        <th style="width:40%">Arbeitsplatz</th>
+                        <th>durchschnittliche Rüstzeit</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>20</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>27</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>20</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>27</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>15</td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>21</td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>18</td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>16</td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td>20</td>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td>17</td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>14</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>15</td>
+                        <td>15</td>
+                      </tr>
+                    </table>
+                    <small>
+                      <img class="info" src="../../../assets/pictures/Info.png" alt="">
+                      Die Simulation soll sich an der Vorperiode orientieren. Deshalt wird die Anzahl der Rüstevents der Vorperiode ausgelesen, da diese von Periode zu Periode
+                      schwankt und mit der hinterlegten durchschnittlichen Rüstdauer multipliziert.
+                    </small><br><br>
+                  <u>Kapazitätsbedarf Vorperiode</u><br>
+                  <p>
+                    <small>
+                      <img class="info" src="../../../assets/pictures/Info.png" alt="">
+                      Der Kapazitätsbedarf um die Produktion der Warteschlange zu berechnen, wird pro Arbeitsplatz ausgelesen und auf den gesamten Kapazitätsbedarf aufsummiert.
+                    </small><br>
+                  </p>
+                  <u>Rüstzeit Vorperiode</u><br>
+                  <p>
+                    <b>Rüstzeit Vorperiode</b> = Anzahl Aufträge in Warteschlange * Durchschnittliche Rüstdauer<br>
+                    <small>
+                      <img class="info" src="../../../assets/pictures/Info.png" alt="">
+                      Dies ist eine Annäherungsformel, die den Zeitbedarf schätzt, der aus den Aufträgen der Vorperiode abzuarbeiten ist.
+                    </small>
+                  </p>
+                  <h3>Schichten</h3>
+                        <textarea class="code" rows="18" cols="85">
+                        if (Kapazitätsbedarf &gt; 6000) {
+                          Schichten = 3;
+                          Überstunden = 0;
+                        } else if (Kapazitätsbedarf &gt; 3600) {
+                          Schichten = 2;
+                          if (Kapazitätsbedarf - 4800 &gt; 0) {
+                            Überstunden = Math.ceil((Kapazitätsbedarf - 4800) / 5);
+                          } else {
+                            Überstunden = 0;
+                          }
+                        } else {
+                          Schichten = 1;
+                          if (Kapazitätsbedarf - 2400 &gt; 0) {
+                            Überstunden = Math.ceil((Kapazitätsbedarf - 2400) / 5);
+                          } else {
+                            Überstunden = 0;
+                          }  
+                        }</textarea>
+                    <small>
+                    <img class="info" src="../../../assets/pictures/Info.png" alt="">
+                    Die Formel bezieht sich auf die Vorgabe, dass pro Schicht nicht mehr als 50% Überstunden gefahren werden dürfen. Die maximal möglichen Minuten pro Schicht liegen
+                    bei 2400 Minuten und somit liegt die Grenze für die nächste benötigte Schicht bei 3600, respektive 6000 Minuten.
+                  </small><br>
+                </mat-expansion-panel>
+
+                <!-- Formeln Mengenplanung -->
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                    (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      {{'Mengenplanung' | translate}}
+                    </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p>In der Mengenplanung wird die längste anzunehmende Zeitdauer zur Hand gezogen, um Leerkosten und erhöhte Bestellkosten vermeiden zu können.</p>
+                    <h3>Bedarf in der Planperiode</h3>
+                    <table style="width:100%">
+                      <tr>
+                        <th style="width:5%">Kaufteil</th>
+                        <th style="width:65%">Bedarfsrechnung</th>
+                        <th style="width:15%">maximale Bestelldauer in Perioden</th>
+                        <th style="width:15%">Diskontmenge in Stk.</th>
+                      </tr>
+                      <tr>
+                        <td>K21</td>
+                        <td>1 * P1</td>
+                        <td>2,2</td>
+                        <td>300</td>
+                      </tr>
+                      <tr>
+                        <td>K22</td>
+                        <td>1 * P2</td>
+                        <td>2,1</td>
+                        <td>300</td>
+                      </tr>
+                      <tr>
+                        <td>K23</td>
+                        <td>1 * P3</td>
+                        <td>1,4</td>
+                        <td>300</td>
+                      </tr>
+                      <tr>
+                        <td>K24</td>
+                        <td>1*P1+1*E51+1*E16+2*E50+2*E49 + 1*P2+1*E56+2*E55+2*E54 + 1*P3+1*E31+2*E30+2*E29</td>
+                        <td>3,5</td>
+                        <td>6100</td>
+                      </tr>
+                      <tr>
+                        <td>K25</td>
+                        <td>2*E50+2*E49 + 2*E55+2*E54 + 2*E30+2*E29</td>
+                        <td>1,1</td>
+                        <td>3600</td>
+                      </tr>
+                      <tr>
+                        <td>K27</td>
+                        <td>1*P1+1*E51 + 1*P2+1*E56 + 1*P3+1*E31</td>
+                        <td>1,1</td>
+                        <td>1800</td>
+                      </tr>
+                      <tr>
+                        <td>K28</td>
+                        <td>1*E16+3*E18 + 4*E19 + 5*E20</td>
+                        <td>2,1</td>
+                        <td>4500</td>
+                      </tr>
+                      <tr>
+                        <td>K32</td>
+                        <td>1*E10+1*E13+1*E18 + 1*E11+1*E14+1*E19 + 1*E12+1*E15+1*E20</td>
+                        <td>2,6</td>
+                        <td>2700</td>
+                      </tr>
+                      <tr>
+                        <td>K33</td>
+                        <td>1*E6+1*E9</td>
+                        <td>2,4</td>
+                        <td>900</td>
+                      </tr>
+                      <tr>
+                        <td>K34</td>
+                        <td>36*E6+36*E9</td>
+                        <td>1,9</td>
+                        <td>22000</td>
+                      </tr>
+                      <tr>
+                        <td>K35</td>
+                        <td>2*E4+2*E7 + 2*E5+2*E8 + 2*E6+2*E9</td>
+                        <td>2,6</td>
+                        <td>3600</td>
+                      </tr>
+                      <tr>
+                        <td>K36</td>
+                        <td>1*E4 + 1*E5 + 1*E6</td>
+                        <td>1,3</td>
+                        <td>900</td>
+                      </tr>
+                      <tr>
+                        <td>K37</td>
+                        <td>1*E7 + 1*E8 + 1*E9</td>
+                        <td>1,8</td>
+                        <td>900</td>
+                      </tr>
+                      <tr>
+                        <td>K38</td>
+                        <td>1*E7 + 1*E8 + 1*E9</td>
+                        <td>2,1</td>
+                        <td>300</td>
+                      </tr>
+                      <tr>
+                        <td>K39</td>
+                        <td>1*E10+1*E13 + 1*E11+1*E14 + 1*E12+1*E15</td>
+                        <td>1,8</td>
+                        <td>1800</td>
+                      </tr>
+                      <tr>
+                        <td>K40</td>
+                        <td>1*E16</td>
+                        <td>1,9</td>
+                        <td>900</td>
+                      </tr>
+                      <tr>
+                        <td>K41</td>
+                        <td>1*E16</td>
+                        <td>1,1</td>
+                        <td>900</td>
+                      </tr>
+                      <tr>
+                        <td>K42</td>
+                        <td>2*E16</td>
+                        <td>1,5</td>
+                        <td>1800</td>
+                      </tr>
+                      <tr>
+                        <td>K43</td>
+                        <td>1*E17</td>
+                        <td>2,5</td>
+                        <td>2700</td>
+                      </tr>
+                      <tr>
+                        <td>K44</td>
+                        <td>1*E17 + 2*E26</td>
+                        <td>1,2</td>
+                        <td>900</td>
+                      </tr>
+                      <tr>
+                        <td>K45</td>
+                        <td>1*E17</td>
+                        <td>2</td>
+                        <td>900</td>
+                      </tr>
+                      <tr>
+                        <td>K46</td>
+                        <td>1*E17</td>
+                        <td>1,2</td>
+                        <td>900</td>
+                      </tr>
+                      <tr>
+                        <td>K47</td>
+                        <td>1*E26</td>
+                        <td>1,2</td>
+                        <td>900</td>
+                      </tr>
+                      <tr>
+                        <td>K48</td>
+                        <td>2*E26</td>
+                        <td>1,2</td>
+                        <td>1800</td>
+                      </tr>
+                      <tr>
+                        <td>K52</td>
+                        <td>1*E4+1*E7</td>
+                        <td>2</td>
+                        <td>600</td>
+                      </tr>
+                      <tr>
+                        <td>K53</td>
+                        <td>36*E4+36*E7</td>
+                        <td>1,8</td>
+                        <td>22000</td>
+                      </tr>
+                      <tr>
+                        <td>K57</td>
+                        <td>1*E5+1*E8</td>
+                        <td>2</td>
+                        <td>600</td>
+                      </tr>
+                      <tr>
+                        <td>K58</td>
+                        <td>36*E5+36*E8</td>
+                        <td>2,1</td>
+                        <td>22000</td>
+                      </tr>
+                      <tr>
+                        <td>K59</td>
+                        <td>2*E18 + 2*E19 + 2*E20</td>
+                        <td>0,9</td>
+                        <td>1800</td>
+                      </tr>
+                    </table>
+                    <h3>Sicherheitsbestand</h3>
+                    <p>
+                      <b>Sicherheitsbestand</b> = 1/3 * Verbrauch während der Wiederbeschaffungszeit<br>
+                      <small>
+                        <img class="info" src="../../../assets/pictures/Info.png" alt="">
+                        Bei der Wiederbeschaffungszeit wird immer nur die aktuelle Planperiode berücksichtigt. Wollen Sie zukünfige Perioden mit einbeziehen, dann tragen Sie doch 
+                        bitte die Prognostizierten Verkäufe in den kommenden Perioden ein.
+                      </small><br>
+                    </p>
+                    <h3>automatisierte Bestellung</h3>
+                    <p>
+                      Um auch dringend benötigte Ressource zeitgerecht zur Verfügung stehen zu haben, wird im Hintergrund eine Klassifizierung und automatisierte Bestellung 
+                      erstellt, die auch Eil- oder Normalbestellungen berücksichtigen.<br>
+                      Eilbestellungen haben einen 10x höheren Bestellwert, kommen jedoch doppelt so schnell an wie die Teile, die mit dem Modus: Normal bestellt wurden.<br>
+                      <br>
+                      <textarea class="code" rows="6" cols="150">
+                        wenn (Lagerbestand - (Verbrauch/Periode) * max Bestelldauer &lt;= 0) {
+                          --&gt; veranlasse Eilbestellung;
+                        } else if (Lagerbestand - (Verbrauch/Periode) * max Bestelldauer &lt;= Sicherheitsbestand) {
+                          --&gt; veranlasse Normalbestellung;
+                        }
+                      </textarea>
+                    </p>
+                    <h3>Bestellmenge</h3>
+                    <p>
+                      <small>
+                        <img class="info" src="../../../assets/pictures/Info.png" alt="">
+                        Bei der Bestellmenge wird immer die Diskontmenge bestellt, um die Bestellkosten wie auch schon durch die optimierte Mengenplanung weiter senken zu können.
+                      </small><br>
+                    </p>
+                    </mat-expansion-panel>
+
+            </mat-accordion>
+
+          </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section #faq>
+  <div class="row">
+    <div class="column">
+      <img class="image_left" src="../../../assets/pictures/FAQ.png" alt="FAQ Bild">
+    </div>
+    <div class="column">
+          <div class="einfuehrung-info">
+            <h2>FAQ</h2>
+            <p class="text">
+              {{'Wir haben für Sie die am häufigsten gestellten Fragen zusammengestellt, damit Sie direkt alle Fragen und Antworten durchsuchen können über unsere intelligente Suche, damit Sie schnellstmöglich Antworten erhalten.' | translate}}<br /> 
+              {{'Oder stellen Sie unseren Experten Ihre eigenen Fragen, damit alle aus unserer Community davon profitieren.' | translate}} <br />
+            </p>
+            <mat-accordion>
+
+              <!-- Formeln Programmplanung -->
+              <mat-expansion-panel (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                 <mat-expansion-panel-header>
+                   <mat-panel-title>
+                   {{'Wie lang ist der Support erreichbar?' | translate}}
+                   </mat-panel-title>
+                   </mat-expansion-panel-header>
+              </mat-expansion-panel>
+              <mat-expansion-panel (opened)="panelOpenState = true"
+                                    (closed)="panelOpenState = false">
+                 <mat-expansion-panel-header>
+                  <mat-panel-title>
+                  {{'Wie sieht das Team der Entwickler aus?' | translate}}
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+              </mat-expansion-panel>
+              <mat-expansion-panel (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{'Wie sehen meine Ausgabedateien aus?' | translate}}
+                </mat-panel-title>
+                  </mat-expansion-panel-header>
+                </mat-expansion-panel>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    {{'Welches Format werden meine Ausgabedateien haben?' | translate}}
+                  </mat-panel-title>
+                    </mat-expansion-panel-header>
+                  </mat-expansion-panel>
+                  <mat-expansion-panel (opened)="panelOpenState = true"
+                  (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      {{'Wie sieht der Bewerbungsprozess bei Ihnen aus?' | translate}}
+                    </mat-panel-title>
+                      </mat-expansion-panel-header>
+                    </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+    </div>
+  </div>
+</section>
+
+   <!-- Kontakt -->
+   <section id="einfuehrung" #team>
+    <div class="container">
+          <div class="einfuehrung-info">
+            <h2 class="h2">{{'Ihre Fragen konnten immernoch nicht beantwortet werden oder wir haben Ihr Interesse geweckt?' | translate}} <br>{{'Dann kontaktieren Sie uns doch!' | translate}}</h2>
+            <p class="h2">
+                {{'Wir helfen, wenn das Tool sich aufhängt, wenn es nicht den richtigen Output zum Input liefert oder es zu langsam wird.' | translate}}<br />
+                {{'Sie können uns per Mail oder via Telefon erreichen.' | translate}}
+                <br><br>
+                <b>{{'Telefon' | translate}}:</b> +49 9999/99999<br><br>
+                <b>E-Mail: </b> <a href="">support@bike2b.com</a>
+              </p>
+          </div>
+    </div>
+  </section>

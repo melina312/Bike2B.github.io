@@ -1,0 +1,34 @@
+.blue-button {
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid #00BCD4;
+    color: white;
+    background-color: #00BCD4;
+    font-size: inherit;
+    font-weight: normal;
+    padding: 15px 30px;
+    cursor: pointer;
+    float: right;
+    margin-right: 100px;
+    text-decoration: none;
+  }
+  
+  .blue-button:hover {
+    text-decoration: underline;
+  }
+
+  .hintergrund{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .hintergrund-prognose{
+    margin-left: 50px;
+    margin-right: 700px;
+  }
+  
+  .überschrift {
+    font-size: x-large;
+    margin-left: 100px;
+    margin-top: 50px;
+  }

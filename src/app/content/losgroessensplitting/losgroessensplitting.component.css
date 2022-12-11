@@ -1,0 +1,22 @@
+.blue-button {
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid #00BCD4;
+    color: white;
+    background-color: #00BCD4;
+    font-size: inherit;
+    font-weight: normal;
+    padding: 15px 30px;
+    cursor: pointer;
+    margin-right: 100px;
+    text-decoration: none;
+  }
+  
+  .blue-button:hover {
+    text-decoration: underline;
+  }
+
+  .hintergrund {
+    width: 40%;
+    margin-left: 50px;
+  }

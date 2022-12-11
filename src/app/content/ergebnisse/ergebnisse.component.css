@@ -1,0 +1,47 @@
+.blue-button {
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid #00BCD4;
+    color: white;
+    background-color: #00BCD4;
+    font-size: inherit;
+    font-weight: normal;
+    padding: 15px 30px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .blue-button:hover {
+    text-decoration: underline;
+  }
+
+  .container {
+    width: 90%;
+    display: table;
+    margin: 40px auto;
+    padding-bottom: 100px auto;
+  }
+
+  .text {
+    text-align: justify;
+  }
+
+  .column{
+    width: 60%;
+  }
+
+  .column1{
+    width: 40%;
+  }
+
+  .image{
+    width: 500px;
+    margin-left: 10px;
+  }
+
+  .image_small{
+    display: block;
+    width: 100px;
+    height: auto;
+    padding-right: 25px;
+  }

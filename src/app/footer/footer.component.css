@@ -1,0 +1,27 @@
+.main {
+    padding-bottom: 30px ;
+}
+
+.footer {
+    background-color: #00BCD4;
+    height: 40px;
+}
+
+.impressum {
+    color: white;
+    float: right;
+    font-size: x-small;
+    margin-left: 25%;
+}
+
+.datenschutz {
+    color: white;
+    float: right;
+    font-size: x-small;
+    margin-left: 2%;
+}
+
+.copyright {
+    font-size: medium;
+    margin-left: 40%;
+}

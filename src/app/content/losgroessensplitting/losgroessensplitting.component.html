@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<mat-card class="hintergrund">
+   <!-- Endprodukt P1 Tabelle -->
+      <p>{{'Losgrößensplitting' | translate}}</p>
+      <table mat-table #table [dataSource]="dataSource" class="mat-elevation-z8" cdkDropList [cdkDropListData]="dataSource" (cdkDropListDropped)="dropTable($event)" >
+              <!-- Artikelnummer -->
+              <ng-container matColumnDef="artikelnummer">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'Artikelnummer' | translate}} </th>
+                <td mat-cell *matCellDef="let element"> {{element.artikelnummer}} </td>
+              </ng-container>
+          
+              <!-- Aktueller Produktionsmenge -->
+              <ng-container matColumnDef="prod_menge">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'Produktionsmenge' | translate}} </th>
+                <td mat-cell *matCellDef="let element"> {{element.prod_menge}} </td>
+              </ng-container>
+          
+              <!-- Aufteilen -->
+              <ng-container matColumnDef="aufteilen">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'Aufteilen' | translate}} </th>
+                <td mat-cell *matCellDef="let element"> 
+                  <input  type="number" min="0" step="10" placeholder=" {{element.aufteilen}} " [ngModelOptions]="{updateOn: 'blur'}" [(ngModel)]=element.aufteilen
+                   (ngModelChange)="split($event, element.artikelnummer)">
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns" cdkDrag [cdkDragData]="row" ></tr>              
+            </table>
+  </mat-card>
+
+
+
+<h2>{{'Sie haben ihre Produktionsplanung abgeschlossen.' | translate}} <br />
+   {{'Folgen Sie dem Button zu ihrer Ergebnis-XML-Datei und laden sie herunter!' | translate}} 
+</h2>
+   <p>&nbsp;</p>
+   <a routerLink="/ergebnisse" (click)="speichern()" class="blue-button"> {{'Speichern' | translate}} & {{'Abschließen' | translate}} </a>
+   <p>&nbsp;</p>	
+   <p>&nbsp;</p>

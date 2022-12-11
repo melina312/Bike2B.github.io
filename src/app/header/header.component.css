@@ -1,0 +1,66 @@
+
+img{
+    float: left;
+    height: 60px;
+    width: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 22px;
+}
+
+.sprachauswahl-deutsch {
+  height: 20px;
+  width: 30px;
+}
+
+.sprachauswahl-englisch {
+  height: 20px;
+  width: 30px;
+}
+
+.sprachauswahl-spanisch {
+  height: 20px;
+  width: 30px;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.spacer {
+  flex: 0.2 auto;
+}
+
+.navigation {
+  --c:linear-gradient(rgb(255, 255, 255) 0 0); /* update the color here */
+  
+  padding-bottom: .15em;
+  background: var(--c), var(--c);
+  background-size: .3em .1em;
+  background-position:50% 100%;
+  background-repeat: no-repeat;
+  transition: .3s linear, background-size .3s .2s linear;
+  cursor: pointer;
+  text-decoration-line: none;
+}
+.navigation:hover {
+  background-size: 40% .1em;
+  background-position: 10% 100%, 90% 100%;
+}
+
+/*
+.navigation{
+  color: white;
+}
+
+.navigation:hover{
+  background-color: #ffffff;
+  border-radius: 50%;
+}*/
+
+button{
+  background-color: #00BCD4;
+  border-color: #00BCD4;
+}

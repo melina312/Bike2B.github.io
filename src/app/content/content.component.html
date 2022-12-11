@@ -1,0 +1,152 @@
+<!-- Startseite -->
+<section id="landing">
+  <div class="row">
+          <div class="column">
+              <h1 class="h1">{{'Willkommen im SCM-System der Zukunft' | translate}}<br>{{'entwickelt durch die' | translate}}:</h1>
+              <h1 class="logo">Bike2B GmbH</h1>
+              <p class="text">
+                {{'Unser innovatives Tool wurde speziell für die Produktion von Fahrrädern entwickelt. Es bietet unzählige Vorteile, welche nur darauf warten von Ihnen entdeckt zu werden!' | translate}}
+              </p>
+              <br />
+              <br />
+              <a (click)="scroll(leistungen)" class="blue-button">{{'Zu unseren Leistungen' | translate}}</a>
+          </div>
+          <div class="column">
+            <img class="image1" src="../../assets/pictures/Startseite.png" alt="Start Bild">
+          </div>
+  </div>
+</section>
+  
+  <!-- Einfuehrung -->
+  <section id="einfuehrung" #leistungen>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <div class="einfuehrung-info">
+            <h2>{{'Ein kleiner Überblick über unsere Leistungen' | translate}}</h2>
+            <br />
+
+            <!-- Leistung Import -->
+            <div class="box">
+              <div class="icon">
+                  <img src="../../assets/pictures/Import.png" alt="" />
+              </div>
+              <div class="content">
+                  <h3>{{'Dateiimport' | translate}}</h3>
+                  <p class="text">
+                    {{'Laden Sie die XML-Datei der vergangenen Periode in das Tool, um die Analyse und Planung starten zu können.' | translate}}
+                  </p>
+              </div>
+            </div>
+            <span class="spacer"></span>
+
+            <!-- Leistung Absatzplanung -->
+            <div class="box">
+            <div class="icon">
+                <img src="../../assets/pictures/Absatzplanung.png" alt="" />
+            </div>
+            <div class="content">
+                <h3>{{ 'Absatzplanung' | translate }}</h3>
+                <p class="text">
+                  {{'Die Aufgabe der Absatzplanung ist es, festzulegen, wie viele Endprodukte in der kommenden Periode vertrieben werden sollen.' | translate}}
+                </p>
+            </div>
+          </div>
+          <span class="spacer"></span>
+
+            <!-- Leistung Programmplanung -->
+            <div class="box">
+            <div class="icon">
+              <img src="../../assets/pictures/Programmplanung.png" alt="" />
+          </div>
+          <div class="content">
+              <h3>{{'Programmplanung' | translate}}</h3>
+              <p class="text">
+                {{'Im Rahmen der Programmplanung wird auf Basis des Vertriebswunsches und der Lagerbestände die Menge der zu produzierenden Teile festgelegt.' | translate}}
+              </p>
+          </div>
+        </div>
+
+           <!-- Leistung Kapazitätsplanung -->
+           <div class="box">
+           <div class="icon">
+            <img src="../../assets/pictures/Kapazitätsplanung.png" alt="" />
+        </div>
+        <div class="content">
+            <h3>{{'Kapazitätsplanung' | translate}}</h3>
+            <p class="text">
+              {{'In diesem Schritt wird der sogenannte Kapazitätsplan auf Basis des Vertriebswunsches im Zusammenhang mit den Rüstzeiten, Rüstschritte, Überstunden, Zusatzschichten, etc. aufgestellt.' | translate}}
+            </p>
+        </div>
+      </div>
+
+          <!-- Leistung Mengenplanung -->
+          <div class="box">
+          <div class="icon">
+            <img src="../../assets/pictures/Mengenplanung.png" alt="" />
+        </div>
+        <div class="content">
+            <h3>{{'Mengenplanung' | translate}}</h3>
+            <p class="text">
+              {{'Innerhalb der Mengenplanung gilt es, das Thema Bestellungen zu behandeln und zu klären welche Teile mit welcher Versandart bestellt werden müssen.' | translate}}
+            </p>
+        </div>
+        </div>
+
+          <!-- Leistung Export -->
+          <div class="box">
+          <div class="icon">
+            <img src="../../assets/pictures/Export.png" alt="" />
+        </div>
+        <div class="content">
+            <h3>{{'Dateiexport' | translate}}</h3>
+            <p class="text">
+              {{'Nachdem die Berechnungen abgeschlossen sind, können Sie auf Basis Ihrer eingegebenen Daten das optimierte Gesamtergebnis in Form einer XML-Datei herunterladen.' | translate}}
+            </p>
+            <br />
+            <br />
+        </div>
+      </div>
+      <br />
+      <br />
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+  
+
+
+<section id="Ende">
+  <div class="row3">
+    <div style="margin-left: auto; margin-right: auto;" class="column">
+      <h2 style="text-align: center;">Simulation</h2>
+      <p style="text-align: center;">
+        {{'Nehmen Sie unsere Leistungen wahr, dann klicken Sie doch einfach auf das Bild' | translate}} <br>
+        {{'oder oben in der Menüleiste auf' | translate}} "Simulation" {{'um mit der Simulation Ihrer Planperiode' | translate}} <br>
+        {{'zu starten' | translate}}.
+      </p>
+      <img routerLink="/simulation" class="image_small" src="../../assets/pictures/Simulieren.png" alt="Simulieren Bild">
+    </div>
+    <div style="margin-left: auto; margin-right: auto;" class="column">
+      <h2 style="text-align: center;">{{'Ergebnisse' | translate}}</h2>
+      <p style="text-align: center;">
+        {{'Sie möchten die Ergebnisse ihrer Simulation herunterladen? Dann klicken Sie doch' | translate}}  <br> 
+        {{'einfach auf das Bild oder oben in der Menüleiste auf' | translate}} "{{'Ergebnisse' | translate}}" {{'Ihre XML-Datei' | translate}} <br> 
+        {{'steht Ihnen dann zum Download bereit.' | translate}}
+      </p>
+      <img routerLink="/ergebnisse" class="image_small" src="../../assets/pictures/Ereignisse.png" alt="Ergebnisse Bild">
+    </div>
+    <div style="margin-left: auto; margin-right: auto;" class="column">
+      <h2 style="text-align: center;">Support</h2>
+      <p style="text-align: center;">
+        {{'Haben Sie Fragen über unsere Leistungen oder benötigen Sie Hilfe bei unserem Tool?' | translate}} <br> 
+        {{'Oder wollen Sie genauer verstehen, wie das Tool funktioniert? Dann klicken Sie doch' | translate}} <br>
+        {{'einfach auf das Bild oder oben in der Menüleiste auf' | translate}} "Support". 
+      </p>
+      <img routerLink="/support" class="image_small" src="../../assets/pictures/Support.png" alt="Support Bild">
+    </div>
+  </div>
+</section>

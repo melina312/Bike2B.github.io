@@ -1,0 +1,73 @@
+.überschrift {
+	font-size: x-large;
+	margin-left: 100px;
+	margin-top: 50px;
+}
+
+.überschrift-zwei {
+	font-size: large;
+	text-align: center;
+}
+
+table {
+	box-shadow: 2px lightgrey;
+	width: 50%;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px lightgrey;
+	box-shadow: 2px 3px 8px lightgrey;
+	padding: 10px;
+}
+
+th, td {
+	border: 0px solid;
+	text-align: center;
+	margin-top: 5%;
+	padding: 10px;
+}
+
+
+.eingabetabelle1 {
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.eingabetabelle2 {
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content
+}
+
+p {
+	font-size: large;
+	text-align: center;
+}
+
+input {
+	width: 85%;
+	margin-left: 5px;
+}
+
+
+.blue-button {
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid #00BCD4;
+    color: white;
+    background-color: #00BCD4;
+    font-size: inherit;
+    font-weight: normal;
+    padding: 15px 30px;
+    cursor: pointer;
+    float: right;
+	margin-right: 100px;
+	text-decoration: none;
+  }
+  
+  .blue-button:hover {
+    text-decoration: underline;
+  }

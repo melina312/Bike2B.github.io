@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+  <!-- Einfuehrung -->
+<section id="einfuehrung" #leistungen>
+    <div class="container">
+        <div style="float:right"><img class="image" src="../../../assets/pictures/Ereignisse.png" alt="Ergebnisse Bild"></div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="einfuehrung-info">
+                    <h2>{{'Ergebnisse' | translate}}</h2>
+                    <p class="text">
+                        {{'Hier können Sie ihre Ergebnisse von ihren bereits simulierten Vorgängen herunterladen. Diese können Sie dann über das SCM-System einbinden' | translate}}
+                        {{'und simulieren. Wollen Sie im Anschluss noch weitere Perioden simulieren, können Sie gerne weitere Ergebnisdateien hochladen und weiterberechnen.' | translate}}<br /><br>
+                        {{'Wenn Sie auf den' | translate}} "{{'Herunterladen' | translate}}"-{{'Button klicken, können Sie die .XML-Datei herunterladen.' | translate}}</p>
+                    <br />
+                    <br />
+                    <a [href]="downloadUrl" download="{{filename}}.xml" class="blue-button">
+                        {{'Herunterladen' | translate}}
+                    </a>
+                    <br><br><br>
+                    <h2>{{'Warum XML?' | translate}}</h2>
+                    <div style="float:left"><img class="image_small" src="../../../assets/pictures/XML.png" alt="XML Bild"></div>
+                    <ul>
+                        <li>{{'XML ist eine Metasprache' | translate}}</li>
+                        <li>{{'XML ist textbasiert' | translate}}</li>
+                        <li>{{'XML erlaubt die Strukturierung von Daten' | translate}}</li>
+                        <li>{{'XML trennt Inhalt vom Layout' | translate}}</li>
+                        <li>{{'XML unterstützt nahezu alle Sprachen dieser Welt' | translate}}</li>
+                        <li>{{'XML ist ein offener Standard' | translate}}</li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

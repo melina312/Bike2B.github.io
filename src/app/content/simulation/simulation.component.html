@@ -1,0 +1,24 @@
+<input type="file" class="file-input" accept="text/xml" (change)="onFileSelected($event)" #fileUpload>
+
+  <!-- Einfuehrung -->
+<section id="einfuehrung" #leistungen>
+    <div class="container">
+        <mat-card class="card">
+           <h2 class="text">{{'Datei-Import' | translate}}</h2> <br>
+            <div class="text">{{'Hier können Sie ihr Perioden-Ergebnis hochladen.' | translate}}<br />
+                {{'Wählen Sie die XML-Datei auf ihrem Computer aus und laden Sie hoch.' | translate}}<br />
+                {{'Anschließend werden Sie direkt zur Absatzplanung weitergeleiten.' | translate}}</div>
+            <div><img class="image" src="../../../assets/pictures/Simulieren.png" alt="Simulation">
+            </div><br>
+            <mat-card-actions>
+                <a (click)="fileUpload.click()" class="blue-button">
+                    {{'Auswählen' | translate}}
+                </a>
+                <!--
+                <input type="file" class="file-input" accept="text/xml" id="upload-btn" (change)="onFileSelected($event)" routerLink="/absatzplanung">
+                <label for="upload-btn" class="blue-button">{{'Auswählen' | translate}}</label>
+                -->
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</section>

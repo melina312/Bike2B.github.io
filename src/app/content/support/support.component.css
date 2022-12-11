@@ -1,0 +1,126 @@
+.container {
+    width: 90%;
+    display: table;
+    margin: 40px auto;
+    padding-top: 100px auto;
+    padding-bottom: 100px auto;
+  }
+  
+  .text {
+    text-align: justify;
+  }
+  
+  .green {
+    color: #00BCD4;
+  }
+ 
+  
+  .blue-button {
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid #00BCD4;
+    color: black;
+    background-color: #00BCD4;
+    font-size: inherit;
+    font-weight: normal;
+    padding: 15px 30px;
+    cursor: pointer;
+  }
+  
+  .blue-button:hover {
+    color: white;
+  }
+
+ 
+  .mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+  }
+  
+  .info {
+    width: 14px;
+    height: 14px;
+    vertical-align: text-bottom;
+  }
+
+  .code {
+    background-color: rgb(255, 254, 254);
+    border: 1px solid black;
+    color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    box-shadow: 1px 1px 1px black;
+    text-align: left;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: solid white;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  .column{
+    float: left;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-align: left;
+  }
+
+  .column1{
+    float: left;
+    width: 100%;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-align: left;
+  }
+
+  .column2{
+    float: left;
+    width: 100%;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .row{
+    display: flex;
+  }
+
+  .image{
+    display: block;
+    width: 500px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: 50px;
+  }
+
+  .image_left{
+    display: block;
+    width: 500px;
+    height: 500px;
+    margin-left: 50px;
+    margin-right: auto;
+  }
+
+  .h1{
+    text-align: center;
+  }
+
+  .h2{
+    text-align: center;
+  }
+
+  .icon{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
